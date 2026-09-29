@@ -1,0 +1,49 @@
+/* Global Styles & Custom Utilities for LS_MINITRY */
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #E0F7FA; /* Soft Water Blue */
+    color: #1E293B;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.02em;
+  }
+  ::selection { background-color: #0284C7; color: white; }
+}
+
+@layer components {
+  .glass-nav {
+    background: rgba(250, 249, 246, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(203, 213, 225, 0.3);
+  }
+  .premium-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .premium-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+  }
+  .input-group { position: relative; }
+  .floating-input {
+    width: 100%; padding: 1rem 0.75rem 0.25rem 0.75rem;
+    border: 1px solid #CBD5E1; border-radius: 0.5rem;
+    outline: none; transition: all 0.2s ease; background: transparent;
+  }
+  .floating-label {
+    position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%);
+    color: #64748B; pointer-events: none; transition: all 0.2s ease;
+  }
+  .floating-input:focus + .floating-label,
+  .floating-input:not(:placeholder-shown) + .floating-label {
+    top: 0.5rem; transform: translateY(0); font-size: 0.75rem; color: #D97706;
+  }
+  .floating-input:focus { border-color: #D97706; box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1); }
+  .hero-slide { opacity: 0; position: absolute; inset: 0; transition: opacity 1s ease-in-out; z-index: 0; }
+  .hero-slide.active { opacity: 1; z-index: 10; }
+}

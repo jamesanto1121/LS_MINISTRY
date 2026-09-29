@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>கிரேஸ் சர்ச் ஃபெலோஷிப் | பெங்களூரு</title>
+    <meta name="description" content="பெங்களூரில் கிறிஸ்துவை மையமாகக் கொண்ட நம்பிக்கையின் குடும்பம். வழிபாடு, கூட்டமைப்பு மற்றும் ஆன்மீக வளர்ச்சிக்காக எங்களுடன் இணையுங்கள்.">
+    
+    <!-- Fonts: Clash Display (via Fontshare) + Plus Jakarta Sans + Noto Sans Tamil -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons: Lucide via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Ensure Tamil font applies to body and headings */
+        body {
+            font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-clash {
+            font-family: 'Clash Display', 'Noto Sans Tamil', sans-serif;
+        }
+    </style>
+</head>
+<body data-page="home" class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-secondary/30">
+
+    <!-- HEADER / NAVBAR (Glassmorphism - Dark Theme) -->
+    <header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-white/10 backdrop-blur-md" style="background-color: #0F172A !important;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index_ta.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-yellow-500 flex items-center justify-center shadow-lg shadow-secondary/20 group-hover:scale-105 transition-transform duration-300">
+                        <i data-lucide="church" class="text-white w-6 h-6 stroke-[2px]"></i>
+                    </div>
+                    <div class="flex flex-col leading-tight">
+                        <span class="font-clash font-bold text-xl text-white tracking-tight">கிரேஸ் சர்ச்</span>
+                        <span class="text-[10px] font-medium text-gray-300 uppercase tracking-widest">ஃபெலோஷிப் இந்தியா</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav with Dropdowns -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index_ta.html" class="nav-link text-sm font-semibold text-white hover:text-secondary-light transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full" data-page="home">முகப்பு</a>
+                    
+                    <!-- Our Church Dropdown -->
+                    <div class="relative group">
+                        <a href="our_church_ta.html" class="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors focus:outline-none">
+                            எங்கள் சபை
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-300 pointer-events-none"></i>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-56 origin-top-left scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out z-50">
+                            <div class="backdrop-blur-xl rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2 ring-1 ring-white/5" style="background-color: #0F172A;">
+                                <a href="our_church_ta.html#vision" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">எங்கள் தரிசனம் & பணி</a>
+                                <a href="our_church_ta.html#leadership" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">தலைமை & போதகர்கள்</a>
+                                <a href="our_church_ta.html#beliefs" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">நாம் நம்புவது</a>
+                                <a href="our_church_ta.html#history" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">எங்கள் வரலாறு</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ministries Dropdown -->
+                    <div class="relative group">
+                        <a href="ministries_ta.html" class="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors focus:outline-none">
+                            ஊழியங்கள்
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-300 pointer-events-none"></i>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-56 origin-top-left scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out z-50">
+                            <div class="backdrop-blur-xl rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2 ring-1 ring-white/5" style="background-color: #0F172A;">
+                                <a href="ministries_ta.html#kids" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">குழந்தைகள் ஊழியம்</a>
+                                <a href="ministries_ta.html#youth" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">இளைஞர் கூட்டமைப்பு</a>
+                                <a href="ministries_ta.html#women-men" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">பெண்கள்/ஆண்கள் ஊழியம்</a>
+                                <a href="ministries_ta.html#worship" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">வழிபாட்டுக் குழு</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sermons Link -->
+                    <a href="sermons_ta.html" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full" data-page="sermons">வேதாகம போதனைகள்</a>
+
+                    <!-- Events Link -->
+                    <a href="events_ta.html" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full" data-page="events">நிகழ்வுகள்</a>
+
+                    <!-- Language Selector (Static Links) -->
+                    <div class="relative group">
+                        <a href="#" class="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors focus:outline-none cursor-default">
+                            <i data-lucide="globe" class="w-4 h-4 text-gray-400"></i>
+                            தமிழ்
+                            <i data-lucide="chevron-down" class="w-3 h-3 opacity-70 text-gray-400 group-hover:rotate-180 transition-transform duration-300 pointer-events-none"></i>
+                        </a>
+                        <div class="absolute top-full right-0 mt-2 w-36 origin-top-right scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out z-50">
+                            <div class="backdrop-blur-xl rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2 ring-1 ring-white/5" style="background-color: #0F172A;">
+                                <a href="index.html" class="block w-full flex items-center justify-between px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">
+                                    <span>English</span>
+                                    <span class="text-xs text-gray-500">EN</span>
+                                </a>
+                                <a href="index_ta.html" class="block w-full flex items-center justify-between px-4 py-2.5 text-sm text-secondary-light font-semibold bg-white/5 transition-colors">
+                                    <span>தமிழ்</span>
+                                    <span class="text-xs">✓</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact_ta.html" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-secondary to-yellow-500 text-white text-sm font-bold hover:shadow-lg hover:scale-105 transition-all duration-300 ml-2" data-page="contact">தொடர்பு கொள்ள</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors" aria-label="Open Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <aside id="mobile-drawer" class="fixed inset-0 z-[60] invisible opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="drawer-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <div id="drawer-panel" class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col border-l border-white/10" style="background-color: #0F172A;">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                <span class="font-clash font-bold text-xl text-white">மெனு</span>
+                <button id="close-btn" class="p-2 rounded-full hover:bg-white/10 text-gray-300" aria-label="Close Menu">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="flex-1 p-6 flex flex-col gap-2 overflow-y-auto">
+                <!-- Home -->
+                <a href="index_ta.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-white bg-white/5" data-page="home">முகப்பு</a>
+                
+                <!-- Our Church Accordion -->
+                <div class="mobile-nav-parent">
+                    <button type="button" class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" aria-expanded="false">
+                        எங்கள் சபை
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-submenu hidden pl-4 pr-2 pb-2 space-y-1">
+                        <a href="our_church_ta.html#vision" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">எங்கள் தரிசனம் & பணி</a>
+                        <a href="our_church_ta.html#leadership" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">தலைமை & போதகர்கள்</a>
+                        <a href="our_church_ta.html#beliefs" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">நாம் நம்புவது</a>
+                        <a href="our_church_ta.html#history" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">எங்கள் வரலாறு</a>
+                    </div>
+                </div>
+
+                <!-- Ministries Accordion -->
+                <div class="mobile-nav-parent">
+                    <button type="button" class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" aria-expanded="false">
+                        ஊழியங்கள்
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-submenu hidden pl-4 pr-2 pb-2 space-y-1">
+                        <a href="ministries_ta.html#kids" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">குழந்தைகள் ஊழியம்</a>
+                        <a href="ministries_ta.html#youth" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">இளைஞர் கூட்டமைப்பு</a>
+                        <a href="ministries_ta.html#women-men" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">பெண்கள்/ஆண்கள் ஊழியம்</a>
+                        <a href="ministries_ta.html#worship" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">வழிபாட்டுக் குழு</a>
+                    </div>
+                </div>
+
+                <!-- Sermons Simple Link -->
+                <a href="sermons_ta.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" data-page="sermons">வேதாகம போதனைகள்</a>
+
+                <!-- Events Simple Link -->
+                <a href="events_ta.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" data-page="events">நிகழ்வுகள்</a>
+
+                <!-- Language Accordion (Mobile - Static Links) -->
+                <div class="mobile-nav-parent mt-2 pt-2 border-t border-white/10">
+                    <a href="#" class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors cursor-default">
+                        <span class="flex items-center gap-2"><i data-lucide="globe" class="w-5 h-5"></i> மொழி</span>
+                        <span class="text-xs text-gray-500">தமிழ் ✓</span>
+                    </a>
+                    <div class="pl-4 pr-2 pb-2 space-y-1">
+                        <a href="index.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors flex items-center justify-between">
+                            <span>Switch to English</span>
+                            <span class="text-xs text-gray-500">EN</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Prayer Simple Link -->
+                <a href="prayer_ta.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" data-page="prayer">ஜெப வேண்டுகோள்கள்</a>
+                
+                <!-- Contact CTA -->
+                <a href="contact_ta.html" class="mt-4 w-full py-3 rounded-lg bg-gradient-to-r from-secondary to-yellow-500 text-white text-center font-bold shadow-lg hover:shadow-lg transition-all" data-page="contact">தொடர்பு கொள்ள</a>
+            </nav>
+        </div>
+    </aside>
+
+    <main>
+        <!-- HERO SECTION WITH PARALLAX SLIDER -->
+        <section class="relative h-screen min-h-[700px] w-full overflow-hidden bg-primary">
+            <div class="hc-root absolute inset-0" id="hero-carousel">
+                <div class="hc-track absolute inset-0">
+                    <!-- Slide 1 -->
+                    <div class="hero-slide active relative w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1438232992360-2c65850d92c1?q=80&w=2070&auto=format&fit=crop" alt="Church Interior Light" class="absolute inset-0 w-full h-full object-cover opacity-40 parallax-bg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto animate-fade-in-up">
+                            <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 border border-secondary/30 text-secondary-light text-xs font-bold tracking-wider uppercase mb-6 backdrop-blur-sm">வரவேற்கிறோம்</span>
+                            <h1 class="font-clash text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6 text-balance drop-shadow-2xl">
+                                அருளில் வளர்ந்து,<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-500 italic">அன்பில் வாழ்வோம்.</span>
+                            </h1>
+                            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                                1994 முதல் கிறிஸ்துவில் வேரூன்றிய பல தலைமுறை சார்ந்த சபை. உண்மையான வழிபாடு, வேதாகம போதனை மற்றும் உண்மையான கூட்டமைப்பை பெங்களூரின் இதயத்தில் அனுபவியுங்கள்.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#services" class="px-8 py-4 rounded-full bg-gradient-to-r from-secondary to-yellow-500 text-white font-bold hover:shadow-glow hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                                    <i data-lucide="calendar-days" class="w-5 h-5"></i> வழிபாட்டு நேரங்கள்
+                                </a>
+                                <a href="sermons_ta.html" class="px-8 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold hover:bg-white/20 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2">
+                                    <i data-lucide="play-circle" class="w-5 h-5"></i> சமீபத்திய போதனையைப் பார்க்க
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="hero-slide relative w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop" alt="Community Gathering" class="absolute inset-0 w-full h-full object-cover opacity-40 parallax-bg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto animate-fade-in-up">
+                            <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 border border-secondary/30 text-secondary-light text-xs font-bold tracking-wider uppercase mb-6 backdrop-blur-sm">எங்கள் சமூகம்</span>
+                            <h1 class="font-clash text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6 text-balance drop-shadow-2xl">
+                                விசுவாசத்திலும்<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-500 italic">நட்பிலும் ஒன்றாய்.</span>
+                            </h1>
+                            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                                ஒவ்வொரு வயதினருக்கும் ஏற்றவாறு வடிவமைக்கப்பட்ட ஊழியங்களைக் கண்டறியுங்கள். குழந்தைகள் ஞாயிறு பள்ளியிலிருந்து ஆண்கள் கூட்டமைப்பு வரை, உங்களுக்கான இடம் இங்கே உள்ளது.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="ministries_ta.html" class="px-8 py-4 rounded-full bg-gradient-to-r from-secondary to-yellow-500 text-white font-bold hover:shadow-glow hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                                    <i data-lucide="users" class="w-5 h-5"></i> ஊழியங்களை ஆராயவும்
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Slide 3 -->
+                     <div class="hero-slide relative w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb67ee?q=80&w=2070&auto=format&fit=crop" alt="Worship Hands" class="absolute inset-0 w-full h-full object-cover opacity-40 parallax-bg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto animate-fade-in-up">
+                            <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 border border-secondary/30 text-secondary-light text-xs font-bold tracking-wider uppercase mb-6 backdrop-blur-sm">உலகளாவிய செல்வாக்கு</span>
+                            <h1 class="font-clash text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6 text-balance drop-shadow-2xl">
+                                உள்ளூரிலும் வெளிநாட்டிலும்<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-500 italic">வாழ்க்கைகளை மாற்றுவோம்.</span>
+                            </h1>
+                            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                                அவுட்ரீச் திட்டங்கள் மற்றும் மிஷனரி வேலைகள் மூலம், தேவனுடைய அன்பை எங்கள் சுவர்களுக்கு அப்பால் நீட்டுகிறோம். ஏழைகளுக்கு சேவை செய்யவும் நம்பிக்கையைப் பகிரவும் எங்களுடன் இணையுங்கள்.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="events_ta.html" class="px-8 py-4 rounded-full bg-gradient-to-r from-secondary to-yellow-500 text-white font-bold hover:shadow-glow hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                                    <i data-lucide="heart-handshake" class="w-5 h-5"></i> பங்கு கொள்ளவும்
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controls -->
+                <button class="hc-prev absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all hidden md:block" aria-label="Previous slide">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button class="hc-next absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all hidden md:block" aria-label="Next slide">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+                
+                <!-- Pagination Dots -->
+                <div class="hc-pagination hc-dots absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3"></div>
+
+                <!-- Progress Bar -->
+                <div class="absolute bottom-0 left-0 w-full h-1 bg-white/10 z-20">
+                    <div class="hc-progress-bar h-full bg-gradient-to-r from-secondary to-yellow-500" style="width: 0%;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK INFO STRIP -->
+        <section class="py-12 bg-surface-container-lowest border-b border-outline-variant/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-outline-variant/20">
+                    <div class="flex items-start gap-4 p-4 animate-on-scroll">
+                        <div class="p-3 rounded-xl bg-secondary/10 text-secondary">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-clash font-bold text-lg text-primary">வழிபாட்டு நேரங்கள்</h3>
+                            <p class="text-sm text-on-surface-variant mt-1">ஞாயிறு: காலை 9:00 (ஆங்கிலம்)<br>ஞாயிறு: காலை 11:15 (இருமொழி)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 animate-on-scroll delay-100">
+                        <div class="p-3 rounded-xl bg-secondary/10 text-secondary">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-clash font-bold text-lg text-primary">இருப்பிடம்</h3>
+                            <p class="text-sm text-on-surface-variant mt-1">ரிச்மண்ட் டவுன்,<br>பெங்களூரு, கர்நாடகா</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 animate-on-scroll delay-200">
+                        <div class="p-3 rounded-xl bg-secondary/10 text-secondary">
+                            <i data-lucide="video" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-clash font-bold text-lg text-primary">நேரலைப் பார்க்க</h3>
+                            <a href="#" class="text-sm text-secondary font-semibold hover:underline mt-1 inline-block">ஆன்லைன் ஸ்ட்ரீமில் இணையுங்கள் →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WELCOME FROM PASTOR -->
+        <section class="py-20 md:py-32 bg-surface overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative animate-on-scroll">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-secondary/20 rounded-full blur-2xl"></div>
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-yellow-500/20 rounded-full blur-2xl"></div>
+                        <img src="https://images.unsplash.com/photo-1566616213894-28481166e2d4?q=80&w=1000&auto=format&fit=crop" alt="Pastor David Rajendran" class="relative rounded-2xl shadow-2xl border-4 border-white object-cover aspect-square w-full">
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/50">
+                            <p class="font-clash font-bold text-primary text-lg">மரியாதைக்குரிய டாக்டர் டேவிட் ராஜேந்திரன்</p>
+                            <p class="text-sm text-on-surface-variant">மூத்த போதகர்</p>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll delay-200">
+                        <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">எங்களைப் பற்றி</span>
+                        <h2 class="font-clash text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-500">கிரேஸ் சர்ச் ஃபெலோஷிப்</span>-க்கு<br>வரவேற்கிறோம்
+                        </h2>
+                        <p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+                            நாங்கள் ஒரு துடிப்பான, கிறிஸ்துவை மையமாகக் கொண்ட குடும்பம். உண்மையான வழிபாடு, வேதாகம போதனை மற்றும் இரக்கமுள்ள சேவை மூலம் தேவனை மகிமைப்படுத்த அர்ப்பணித்துள்ளோம். நீங்கள் விசுவாசத்தை முதன்முறையாகத் தேடுகிறவராக இருந்தாலும் அல்லது ஒரு ஆன்மீக வீட்டைத் தேடுகிறவராக இருந்தாலும், நீங்கள் இங்கேயே சேர்ந்தவர்.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-secondary"></i>
+                                <span class="text-on-surface font-medium">வேதாகம போதனை & விளக்க பிரசங்கம்</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-secondary"></i>
+                                <span class="text-on-surface font-medium">எல்லா தலைமுறைகளையும் உள்ளடக்கிய சுறுசுறுப்பான வழிபாடு</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-secondary"></i>
+                                <span class="text-on-surface font-medium">செயலில் உள்ள அவுட்ரீச் & சமூக பராமரிப்பு</span>
+                            </li>
+                        </ul>
+                        <a href="our_church_ta.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-semibold hover:bg-primary-container hover:shadow-lg transition-all duration-300">
+                            மேலும் அறிய <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENTO BOX MINISTRIES PREVIEW -->
+        <section class="py-20 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-on-scroll">
+                    <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">இணைந்திருங்கள்</span>
+                    <h2 class="font-clash text-4xl md:text-5xl font-bold text-primary">எங்கள் ஊழியங்கள்</h2>
+                    <p class="text-on-surface-variant mt-4 max-w-2xl mx-auto">கிறிஸ்துவின் உடலில் உங்கள் இடத்தைக் கண்டறியுங்கள். சேவை செய்யவும், வளரவும், இணைக்கவும் அனைவருக்கும் வாய்ப்புகள் எங்களிடம் உள்ளன.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
+                    <!-- Large Card: Youth -->
+                    <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-lg animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ae?q=80&w=1000&auto=format&fit=crop" alt="Youth Ministry" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <div class="transform transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                <span class="text-secondary-light text-sm font-bold uppercase tracking-wider mb-2 block">சிறப்பு</span>
+                                <h3 class="font-clash text-3xl font-bold text-white mb-2">இளைஞர் கூட்டமைப்பு</h3>
+                                <p class="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">உண்மை, பேரார்வம் மற்றும் நோக்கத்துடன் அடுத்த தலைமுறைக்கு அதிகாரம் அளிக்கிறது.</p>
+                                <a href="ministries_ta.html#youth" class="inline-flex items-center gap-2 text-white font-semibold hover:text-secondary-light transition-colors">
+                                    ஆராயவும் <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medium Card: Kids -->
+                    <div class="md:col-span-2 relative group overflow-hidden rounded-2xl shadow-lg animate-on-scroll delay-100">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1000&auto=format&fit=crop" alt="Kids Ministry" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="font-clash text-2xl font-bold text-white mb-1">குழந்தைகள் ஞாயிறு பள்ளி</h3>
+                            <p class="text-gray-300 text-sm">வேடிக்கையான, பாதுகாப்பான மற்றும் வேதாகம அடிப்படையிலான கற்றல்.</p>
+                        </div>
+                    </div>
+
+                    <!-- Small Card: Worship -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-lg bg-white animate-on-scroll delay-200">
+                        <div class="p-6 h-full flex flex-col justify-between">
+                            <div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
+                                <i data-lucide="music" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-clash text-xl font-bold text-primary mb-1">வழிபாட்டுக் குழு</h3>
+                                <p class="text-sm text-on-surface-variant">சபையை துதியில் முன்னிலை வகிக்கிறது.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Small Card: Outreach -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-lg bg-white animate-on-scroll delay-300">
+                        <div class="p-6 h-full flex flex-col justify-between">
+                            <div class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-600 flex items-center justify-center mb-4 group-hover:bg-yellow-500 group-hover:text-white transition-colors">
+                                <i data-lucide="hand-heart" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-clash text-xl font-bold text-primary mb-1">அவுட்ரீச் & மிஷன்ஸ்</h3>
+                                <p class="text-sm text-on-surface-variant">நகரத்திற்கும் தேசங்களுக்கும் சேவை செய்கிறது.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12 animate-on-scroll">
+                    <a href="ministries_ta.html" class="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all duration-300">
+                        அனைத்து ஊழியங்களையும் காண <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANIMATED COUNTERS SECTION -->
+        <section class="py-20 bg-primary text-white relative overflow-hidden">
+            <!-- Decorative Gradient Blobs -->
+            <div class="absolute top-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="animate-on-scroll">
+                        <div class="counter-value font-clash text-5xl md:text-6xl font-bold text-secondary-light mb-2" data-target="32">0</div>
+                        <p class="text-sm uppercase tracking-wider text-gray-400 font-semibold">ஊழிய ஆண்டுகள்</p>
+                    </div>
+                    <div class="animate-on-scroll delay-100">
+                        <div class="counter-value font-clash text-5xl md:text-6xl font-bold text-secondary-light mb-2" data-target="1500">0</div>
+                        <p class="text-sm uppercase tracking-wider text-gray-400 font-semibold">செயலில் உள்ள உறுப்பினர்கள்</p>
+                    </div>
+                    <div class="animate-on-scroll delay-200">
+                        <div class="counter-value font-clash text-5xl md:text-6xl font-bold text-secondary-light mb-2" data-target="5000">0</div>
+                        <p class="text-sm uppercase tracking-wider text-gray-400 font-semibold">வாராந்திர வருபவர்கள்</p>
+                    </div>
+                    <div class="animate-on-scroll delay-300">
+                        <div class="counter-value font-clash text-5xl md:text-6xl font-bold text-secondary-light mb-2" data-target="12">0</div>
+                        <p class="text-sm uppercase tracking-wider text-gray-400 font-semibold">ஊழியங்கள்</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UPCOMING EVENTS PREVIEW -->
+        <section class="py-20 bg-surface">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 animate-on-scroll">
+                    <div>
+                        <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">நாட்காட்டியில் குறிக்கவும்</span>
+                        <h2 class="font-clash text-4xl md:text-5xl font-bold text-primary">வரவிருக்கும் நிகழ்வுகள்</h2>
+                    </div>
+                    <a href="events_ta.html" class="text-primary font-semibold hover:text-secondary transition-colors mt-4 md:mt-0 flex items-center gap-1">
+                        அனைத்து நிகழ்வுகளையும் காண <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Event 1 -->
+                    <div class="group bg-white rounded-2xl shadow-soft hover:shadow-card-hover transition-all duration-300 overflow-hidden border border-outline-variant/20 animate-on-scroll">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1000&auto=format&fit=crop" alt="Prayer Summit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">அக் 15</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-clash text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">ஆண்டு உண்ணாவிரத & ஜெப உச்சிமாநாடு</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 line-clamp-2">விருந்தினர் பேச்சாளர்களால் வழிநடத்தப்படும் மூன்று நாட்கள் தீவிர ஜெபம், உண்ணாவிரதம் மற்றும் ஆன்மீக புதுப்பித்தல்.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+                                <span class="text-xs text-on-surface-variant flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3"></i> பிரதான ஆலயம்</span>
+                                <a href="#" class="text-sm font-bold text-secondary hover:underline">இப்போதே பதிவு செய்யவும்</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="group bg-white rounded-2xl shadow-soft hover:shadow-card-hover transition-all duration-300 overflow-hidden border border-outline-variant/20 animate-on-scroll delay-100">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000&auto=format&fit=crop" alt="Youth Night" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute top-4 left-4 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">நவ 02</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-clash text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">இளைஞர் இக்னைட் இரவு</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 line-clamp-2">டீனேஜர்கள் மற்றும் இளைஞர்களுக்கான வழிபாடு, விளையாட்டு மற்றும் சக்திவாய்ந்த சாட்சியங்களின் ஆற்றல்மிக்க மாலை.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+                                <span class="text-xs text-on-surface-variant flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3"></i> இளைஞர் மண்டபம்</span>
+                                <a href="#" class="text-sm font-bold text-secondary hover:underline">பதிவு செய்யவும்</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="group bg-white rounded-2xl shadow-soft hover:shadow-card-hover transition-all duration-300 overflow-hidden border border-outline-variant/20 animate-on-scroll delay-200">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=1000&auto=format&fit=crop" alt="Christmas Concert" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">டிச 24</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-clash text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">மெழுகுவர்த்தி ஒளியில் கிறிஸ்துமஸ் ஈவ்</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 line-clamp-2">பாடல்கள், வேதாகம வாசிப்பு மற்றும் குருவான விருந்துடன் நம் இரட்சகரின் பிறப்பைக் கொண்டாடுவோம்.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+                                <span class="text-xs text-on-surface-variant flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3"></i> பிரதான ஆலயம்</span>
+                                <a href="#" class="text-sm font-bold text-secondary hover:underline">விவரங்கள்</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-primary text-white pt-20 pb-10 border-t border-[#BAE6FD]/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="lg:col-span-1">
+                        <a href="index_ta.html" class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-yellow-500 flex items-center justify-center shadow-lg">
+                                <i data-lucide="church" class="text-white w-6 h-6"></i>
+                            </div>
+                            <span class="font-clash font-bold text-xl text-white tracking-tight">கிரேஸ் சர்ச்</span>
+                        </a>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            பெங்களூரில் உள்ள கிறிஸ்துவை மையமாகக் கொண்ட நம்பிக்கையின் குடும்பம், அருளில் வளர்ந்து அன்பில் வாழ அர்ப்பணித்துள்ளது.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-secondary hover:text-white transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-secondary hover:text-white transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-secondary hover:text-white transition-all"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="font-clash font-bold text-lg text-white mb-6">விரைவு இணைப்புகள்</h4>
+                        <ul class="space-y-3">
+                            <li><a href="our_church_ta.html" class="text-gray-400 hover:text-secondary transition-colors text-sm">எங்களைப் பற்றி</a></li>
+                            <li><a href="ministries_ta.html" class="text-gray-400 hover:text-secondary transition-colors text-sm">ஊழியங்கள்</a></li>
+                            <li><a href="sermons_ta.html" class="text-gray-400 hover:text-secondary transition-colors text-sm">போதனைகள்</a></li>
+                            <li><a href="events_ta.html" class="text-gray-400 hover:text-secondary transition-colors text-sm">நிகழ்வுகள்</a></li>
+                            <li><a href="contact_ta.html" class="text-gray-400 hover:text-secondary transition-colors text-sm">தொடர்பு</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Times -->
+                    <div>
+                        <h4 class="font-clash font-bold text-lg text-white mb-6">வழிபாட்டு நேரங்கள்</h4>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li class="flex justify-between border-b border-white/5 pb-2">
+                                <span>ஞாயிறு ஆங்கிலம்</span>
+                                <span>காலை 9:00</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/5 pb-2">
+                                <span>ஞாயிறு இருமொழி</span>
+                                <span>காலை 11:15</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/5 pb-2">
+                                <span>வெள்ளி ஜெபம்</span>
+                                <span>மாலை 7:00</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div>
+                        <h4 class="font-clash font-bold text-lg text-white mb-6">தொடர்பு</h4>
+                        <address class="not-italic text-sm text-gray-400 space-y-3">
+                            <p class="flex items-start gap-2">
+                                <i data-lucide="map-pin" class="w-4 h-4 mt-1 shrink-0 text-secondary"></i>
+                                <span>No. 12, Richmond Road,<br>Bengaluru - 560025</span>
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i data-lucide="phone" class="w-4 h-4 shrink-0 text-secondary"></i>
+                                <a href="tel:+918012345678" class="hover:text-white transition-colors">+91 80 1234 5678</a>
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i data-lucide="mail" class="w-4 h-4 shrink-0 text-secondary"></i>
+                                <a href="mailto:info@gracechurch.org.in" class="hover:text-white transition-colors">info@gracechurch.org.in</a>
+                            </p>
+                        </address>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-xs text-gray-500">&copy; 2026 கிரேஸ் சர்ச் ஃபெலோஷிப் பெங்களூரு. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-xs text-gray-500 hover:text-white transition-colors">தனியுரிமைக் கொள்கை</a>
+                        <a href="#" class="text-xs text-gray-500 hover:text-white transition-colors">சேவை நிபந்தனைகள்</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/nav.js"></script>
+    <script src="js/hero-slider.js"></script>
+    <script src="js/animations.js"></script> 
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

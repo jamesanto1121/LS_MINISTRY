@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events | Grace Church Fellowship</title>
+    
+    <!-- Fonts: Clash Display (via Fontshare) + Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons: Lucide via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="events" class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-secondary/30 font-sans">
+
+    <!-- HEADER / NAVBAR (Glassmorphism - Dark Theme) -->
+    <header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-white/10 backdrop-blur-md" style="background-color: #0F172A !important;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-yellow-500 flex items-center justify-center shadow-lg shadow-secondary/20 group-hover:scale-105 transition-transform duration-300">
+                        <i data-lucide="church" class="text-white w-6 h-6 stroke-[2px]"></i>
+                    </div>
+                    <div class="flex flex-col leading-tight">
+                        <span class="font-clash font-bold text-xl text-white tracking-tight">Grace Church</span>
+                        <span class="text-[10px] font-medium text-gray-300 uppercase tracking-widest">Fellowship India</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav with Dropdowns -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="nav-link text-sm font-semibold text-white hover:text-secondary-light transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full" data-page="home">Home</a>
+                    
+                    <!-- Our Church Dropdown -->
+                    <div class="relative group">
+                        <a href="our_church.html" class="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors focus:outline-none">
+                            Our Church
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-300 pointer-events-none"></i>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-56 origin-top-left scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out z-50">
+                            <div class="backdrop-blur-xl rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2 ring-1 ring-white/5" style="background-color: #0F172A;">
+                                <a href="our_church.html#vision" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Our Vision & Mission</a>
+                                <a href="our_church.html#leadership" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Leadership & Pastors</a>
+                                <a href="our_church.html#beliefs" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">What We Believe</a>
+                                <a href="our_church.html#history" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Our History</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ministries Dropdown -->
+                    <div class="relative group">
+                        <a href="ministries.html" class="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors focus:outline-none">
+                            Ministries
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-300 pointer-events-none"></i>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-56 origin-top-left scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out z-50">
+                            <div class="backdrop-blur-xl rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2 ring-1 ring-white/5" style="background-color: #0F172A;">
+                                <a href="ministries.html#kids" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Kids Ministry</a>
+                                <a href="ministries.html#youth" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Youth Fellowship</a>
+                                <a href="ministries.html#women-men" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Women's/Men's Ministry</a>
+                                <a href="ministries.html#worship" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Worship Team</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sermons Link -->
+                    <a href="sermons.html" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full" data-page="sermons">Sermons</a>
+
+                    <!-- Events Link (Active) -->
+                    <a href="events.html" class="nav-link text-sm font-semibold text-white hover:text-secondary-light transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-secondary" data-page="events">Events</a>
+
+                    <a href="contact.html" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-secondary to-yellow-500 text-white text-sm font-bold hover:shadow-lg hover:scale-105 transition-all duration-300 ml-2" data-page="contact">Contact Us</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors" aria-label="Open Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <aside id="mobile-drawer" class="fixed inset-0 z-[60] invisible opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="drawer-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <div id="drawer-panel" class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col border-l border-white/10" style="background-color: #0F172A;">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                <span class="font-clash font-bold text-xl text-white">Menu</span>
+                <button id="close-btn" class="p-2 rounded-full hover:bg-white/10 text-gray-300" aria-label="Close Menu">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="flex-1 p-6 flex flex-col gap-2 overflow-y-auto">
+                <!-- Home -->
+                <a href="index.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" data-page="home">Home</a>
+                
+                <!-- Our Church Accordion -->
+                <div class="mobile-nav-parent">
+                    <button type="button" class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" aria-expanded="false">
+                        Our Church
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-submenu hidden pl-4 pr-2 pb-2 space-y-1">
+                        <a href="our_church.html#vision" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Our Vision & Mission</a>
+                        <a href="our_church.html#leadership" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Leadership & Pastors</a>
+                        <a href="our_church.html#beliefs" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">What We Believe</a>
+                        <a href="our_church.html#history" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Our History</a>
+                    </div>
+                </div>
+
+                <!-- Ministries Accordion -->
+                <div class="mobile-nav-parent">
+                    <button type="button" class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" aria-expanded="false">
+                        Ministries
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-submenu hidden pl-4 pr-2 pb-2 space-y-1">
+                        <a href="ministries.html#kids" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Kids Ministry</a>
+                        <a href="ministries.html#youth" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Youth Fellowship</a>
+                        <a href="ministries.html#women-men" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Women's/Men's Ministry</a>
+                        <a href="ministries.html#worship" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Worship Team</a>
+                    </div>
+                </div>
+
+                <!-- Sermons Simple Link -->
+                <a href="sermons.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" data-page="sermons">Sermons</a>
+
+                <!-- Events Simple Link (Active) -->
+                <a href="events.html" class="nav-item block px-4 py-3 rounded-lg text-base font-semibold text-white bg-white/5" data-page="events">Events</a>
+
+                <!-- Prayer Simple Link -->
+                <a href="prayer.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" data-page="prayer">Prayer Requests</a>
+                
+                <!-- Contact CTA -->
+                <a href="contact.html" class="mt-4 w-full py-3 rounded-lg bg-gradient-to-r from-secondary to-yellow-500 text-white text-center font-bold shadow-lg hover:shadow-lg transition-all" data-page="contact">Contact Us</a>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="pt-20">
+        <!-- HERO SECTION FOR EVENTS -->
+        <section class="relative py-20 md:py-32 bg-primary overflow-hidden">
+            <!-- Decorative Gradient Blobs -->
+            <div class="absolute top-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-on-scroll">
+                <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 border border-secondary/30 text-secondary-light text-xs font-bold tracking-wider uppercase mb-6 backdrop-blur-sm">Join Us</span>
+                <h1 class="font-clash text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 text-balance drop-shadow-2xl">
+                    Upcoming <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-500 italic">Gatherings.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                    Connect with our community through worship, fellowship, and service. Check out what's happening next at Grace Church.
+                </p>
+            </div>
+        </section>
+
+        <!-- FEATURED EVENT (Large Card) -->
+        <section class="py-20 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12 flex items-end justify-between animate-on-scroll">
+                    <div>
+                        <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">Featured Event</span>
+                        <h2 class="font-clash text-3xl md:text-4xl font-bold text-primary">Mountain Escape Retreat</h2>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch animate-on-scroll delay-100">
+                    
+                    <!-- Event Image Side -->
+                    <div class="lg:col-span-7 relative group overflow-hidden rounded-2xl shadow-soft hover:shadow-card-hover transition-all duration-300 border border-outline-variant/20 min-h-[400px]">
+                        <img 
+                            src="https://images.unsplash.com/photo-1523580494863-6f303122fdce?q=80&w=2070&auto=format&fit=crop" 
+                            alt="Summer Retreat" 
+                            class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+                        
+                        <!-- Date Badge Floating -->
+                        <div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md text-primary px-4 py-2 rounded-xl shadow-lg border border-white/50">
+                            <span class="block text-xs font-bold uppercase tracking-wide text-secondary">July 15-17</span>
+                            <span class="block text-sm font-semibold">Annual Retreat</span>
+                        </div>
+                    </div>
+
+                    <!-- Event Details Side -->
+                    <div class="lg:col-span-5 flex flex-col justify-center bg-white rounded-2xl p-8 md:p-12 shadow-soft border border-outline-variant/20">
+                        <div class="mb-6">
+                            <span class="text-secondary font-bold text-sm uppercase tracking-wider mb-2 block">Spiritual Renewal</span>
+                            <h3 class="font-clash text-2xl md:text-3xl font-bold text-primary leading-tight mb-4">Recharge Your Soul in the Hills</h3>
+                            <p class="text-on-surface-variant leading-relaxed mb-6">
+                                Join us for a weekend of spiritual renewal, deep connection, and adventure in the hills. Perfect for families and individuals seeking a break from the city rush.
+                            </p>
+                            
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-sm text-on-surface">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-secondary shrink-0 mt-0.5"></i>
+                                    <span><strong>Location:</strong> Coorg Hills Resort, Karnataka</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-on-surface">
+                                    <i data-lucide="users" class="w-5 h-5 text-secondary shrink-0 mt-0.5"></i>
+                                    <span><strong>Capacity:</strong> Limited to 50 Attendees</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-on-surface">
+                                    <i data-lucide="ticket" class="w-5 h-5 text-secondary shrink-0 mt-0.5"></i>
+                                    <span><strong>Registration:</strong> Open until June 30th</span>
+                                </li>
+                            </ul>
+
+                            <a href="#register" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-secondary to-yellow-500 text-white font-bold hover:shadow-glow hover:scale-105 transition-all duration-300 w-full md:w-auto">
+                                Register Now
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENTO GRID EVENTS LIST -->
+        <section class="py-20 bg-surface">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4 animate-on-scroll">
+                    <div>
+                        <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">Calendar</span>
+                        <h2 class="font-clash text-3xl md:text-4xl font-bold text-primary">All Upcoming Events</h2>
+                        <p class="text-on-surface-variant mt-2">Stay updated with our weekly schedule and special gatherings.</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button class="px-4 py-2 rounded-full bg-white text-on-surface-variant border border-outline-variant/20 text-sm font-medium hover:bg-secondary/10 hover:text-secondary transition-colors">Filter by Type</button>
+                        <button class="px-4 py-2 rounded-full bg-white text-on-surface-variant border border-outline-variant/20 text-sm font-medium hover:bg-secondary/10 hover:text-secondary transition-colors">Sort by Date</button>
+                    </div>
+                </div>
+
+                <!-- Bento Grid Container -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[800px]">
+                    
+                    <!-- Large Card: Sunday Worship (Spans 2 cols, 2 rows) -->
+                    <article class="group relative col-span-1 md:col-span-2 row-span-2 overflow-hidden rounded-2xl shadow-lg animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1438232992360-2c65850d92c1?q=80&w=1000&auto=format&fit=crop" alt="Sunday Service" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <div class="transform transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                <span class="text-secondary-light text-sm font-bold uppercase tracking-wider mb-2 block">Weekly</span>
+                                <h3 class="font-clash text-3xl font-bold text-white mb-2">Sunday Worship Service</h3>
+                                <p class="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Experience powerful preaching, heartfelt worship, and community fellowship.</p>
+                                <div class="flex items-center gap-4 text-sm text-gray-300">
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 9:00 AM & 11:15 AM</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-4 h-4"></i> Main Sanctuary</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Medium Card: Youth Night -->
+                    <article class="group relative col-span-1 md:col-span-2 row-span-1 overflow-hidden rounded-2xl shadow-lg bg-primary animate-on-scroll delay-100">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 to-purple-900 opacity-90"></div>
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                        <div class="relative z-10 p-8 h-full flex flex-col justify-between text-white">
+                            <div>
+                                <span class="inline-block px-2 py-1 rounded-md bg-white/10 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider mb-3">Teenagers</span>
+                                <h3 class="font-clash text-2xl font-bold mb-2">Friday Night Youth</h3>
+                                <p class="text-indigo-200 text-sm opacity-80 line-clamp-2">Games, worship, and relevant teaching for high schoolers.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center">
+                                <p class="text-xs font-mono text-indigo-300">FRIDAY • 7:00 PM</p>
+                                <a href="#" class="text-sm font-semibold text-white hover:text-secondary-light transition-colors flex items-center gap-1">Details <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Small Card: Women's Bible Study -->
+                    <article class="group relative col-span-1 row-span-1 overflow-hidden rounded-2xl shadow-lg bg-white animate-on-scroll delay-200">
+                        <div class="p-6 h-full flex flex-col justify-between">
+                            <div class="w-12 h-12 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center mb-4 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                                <i data-lucide="book-open" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-clash text-xl font-bold text-primary mb-1">Women's Circle</h3>
+                                <p class="text-sm text-on-surface-variant mb-4 line-clamp-2">Deep dive into Romans. Coffee and conversation provided.</p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+                                <span class="text-xs text-on-surface-variant flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> Tue • 10:00 AM</span>
+                                <a href="#" class="text-sm font-bold text-secondary hover:underline">RSVP</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Small Card: Men's Breakfast -->
+                    <article class="group relative col-span-1 row-span-1 overflow-hidden rounded-2xl shadow-lg bg-white animate-on-scroll delay-300">
+                        <div class="p-6 h-full flex flex-col justify-between">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                                <i data-lucide="utensils" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-clash text-xl font-bold text-primary mb-1">Men's Breakfast</h3>
+                                <p class="text-sm text-on-surface-variant mb-4 line-clamp-2">Great food, brotherhood, and practical discipleship.</p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+                                <span class="text-xs text-on-surface-variant flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> 1st Sat • 8:00 AM</span>
+                                <a href="#" class="text-sm font-bold text-secondary hover:underline">Join</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER CTA -->
+        <section class="py-20 bg-primary text-white relative overflow-hidden">
+            <!-- Decorative Gradient Blobs -->
+            <div class="absolute top-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-on-scroll">
+                <h2 class="font-clash text-3xl md:text-5xl font-bold text-white mb-6">Never Miss an Update</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-10">Subscribe to our newsletter to receive weekly devotionals, event reminders, and church news directly in your inbox.</p>
+                
+                <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+                    <input type="email" placeholder="Enter your email address" class="flex-1 px-5 py-4 rounded-full bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all">
+                    <button type="submit" class="px-8 py-4 rounded-full bg-gradient-to-r from-secondary to-yellow-500 text-white font-bold hover:shadow-glow transition-all whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </form>
+                <p class="text-xs text-gray-500 mt-4">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white pt-20 pb-10 border-t border-[#BAE6FD]/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-yellow-500 flex items-center justify-center shadow-lg">
+                            <i data-lucide="church" class="text-white w-6 h-6"></i>
+                        </div>
+                        <span class="font-clash font-bold text-xl text-[#0F172A] tracking-tight">Grace Church</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        A Christ-centered family of faith in Bengaluru, committed to growing in grace and living in love.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-secondary hover:text-white transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-secondary hover:text-white transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-secondary hover:text-white transition-all"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-clash font-bold text-lg text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="our_church.html" class="text-gray-400 hover:text-secondary transition-colors text-sm">About Us</a></li>
+                        <li><a href="ministries.html" class="text-gray-400 hover:text-secondary transition-colors text-sm">Ministries</a></li>
+                        <li><a href="sermons.html" class="text-gray-400 hover:text-secondary transition-colors text-sm">Sermons</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-secondary transition-colors text-sm">Events</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-secondary transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Service Times -->
+                <div>
+                    <h4 class="font-clash font-bold text-lg text-white mb-6">Service Times</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex justify-between border-b border-white/5 pb-2">
+                            <span>Sunday English</span>
+                            <span class="text-white font-medium">9:00 AM</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-2">
+                            <span>Sunday Bilingual</span>
+                            <span class="text-white font-medium">11:15 AM</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-2">
+                            <span>Wednesday Prayer</span>
+                            <span class="text-white font-medium">7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Friday Intercession</span>
+                            <span class="text-white font-medium">10:30 AM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-clash font-bold text-lg text-white mb-6">Stay Updated</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe to receive weekly sermon notes and event updates.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Your email address" class="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all text-sm">
+                        <button type="submit" class="bg-gradient-to-r from-secondary to-yellow-500 text-white font-bold py-3 rounded-lg hover:shadow-glow transition-all text-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-500">&copy; 2026 Grace Church Fellowship Bengaluru. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-xs text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-xs text-gray-500 hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/nav.js"></script>
+    <script src="js/animations.js"></script>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

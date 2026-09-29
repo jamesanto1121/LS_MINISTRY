@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Grace Church Fellowship</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact" class="bg-surface text-on-surface antialiased selection:bg-secondary selection:text-white">
+
+    <!-- HEADER / NAVBAR -->
+    <header id="main-header" class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-secondary shadow-lg group-hover:scale-105 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">church</span>
+                    </div>
+                    <div class="flex flex-col leading-tight">
+                        <span class="font-serif font-bold text-xl text-primary tracking-tight">Grace Church</span>
+                        <span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Fellowship India</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" data-page="home">Home</a>
+                    <a href="our_church.html" class="nav-link text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" data-page="our-church">Our Church</a>
+                    <a href="ministries.html" class="nav-link text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" data-page="ministries">Ministries</a>
+                    <a href="sermons.html" class="nav-link text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" data-page="sermons">Sermons</a>
+                    <a href="events.html" class="nav-link text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" data-page="events">Events</a>
+                    <a href="contact.html" class="px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-container hover:shadow-glow transition-all" data-page="contact">Contact Us</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" aria-label="Open Menu">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <aside id="mobile-drawer" class="fixed inset-0 z-[60] invisible opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="drawer-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+        <div id="drawer-panel" class="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-surface shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+            <div class="p-6 border-b border-outline-variant/30 flex justify-between items-center">
+                <span class="font-serif font-bold text-xl text-primary">Menu</span>
+                <button id="close-btn" class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant" aria-label="Close Menu">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
+            </div>
+            <nav class="flex-1 p-6 flex flex-col gap-4 overflow-y-auto">
+                <a href="index.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-on-surface hover:bg-surface-container transition-colors" data-page="home">Home</a>
+                <a href="our_church.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-on-surface hover:bg-surface-container transition-colors" data-page="our-church">Our Church</a>
+                <a href="ministries.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-on-surface hover:bg-surface-container transition-colors" data-page="ministries">Ministries</a>
+                <a href="sermons.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-on-surface hover:bg-surface-container transition-colors" data-page="sermons">Sermons</a>
+                <a href="events.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-on-surface hover:bg-surface-container transition-colors" data-page="events">Events</a>
+                <a href="prayer.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-on-surface hover:bg-surface-container transition-colors" data-page="prayer">Prayer Requests</a>
+                <a href="contact.html" class="mt-4 w-full py-3 rounded-lg bg-primary text-white text-center font-semibold shadow-lg" data-page="contact">Contact Us</a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="pt-20 min-h-screen">
+        
+        <!-- PAGE HERO -->
+        <section class="py-16 bg-primary text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-secondary/10 blur-3xl"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <span class="text-secondary-light font-bold tracking-wider uppercase text-sm">Get In Touch</span>
+                <h1 class="font-serif text-4xl md:text-5xl font-bold mt-2 mb-4">We'd Love to Hear From You</h1>
+                <p class="text-gray-300 max-w-2xl text-lg">Have questions about our services, ministries, or visiting? Reach out to us anytime.</p>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="py-16 bg-surface">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Left Side: Form -->
+                    <div class="bg-white p-8 md:p-10 rounded-2xl shadow-soft border border-outline-variant/30">
+                        <h2 class="font-serif text-2xl font-bold text-primary mb-6">Send a Message</h2>
+                        
+                        <form class="space-y-6">
+                            <!-- Name Field -->
+                            <div class="input-group">
+                                <input type="text" id="name" placeholder=" " required class="floating-input peer">
+                                <label for="name" class="floating-label">Full Name</label>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="input-group">
+                                <input type="email" id="email" placeholder=" " required class="floating-input peer">
+                                <label for="email" class="floating-label">Email Address</label>
+                            </div>
+
+                            <!-- Subject Field -->
+                            <div class="input-group">
+                                <select id="subject" required class="floating-input peer appearance-none bg-transparent cursor-pointer">
+                                    <option value="" disabled selected hidden></option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="visit">Planning a Visit</option>
+                                    <option value="ministry">Ministry Question</option>
+                                    <option value="prayer">Prayer Request</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label for="subject" class="floating-label">Subject</label>
+                                <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+                            </div>
+
+                            <!-- Message Field -->
+                            <div class="input-group">
+                                <textarea id="message" rows="5" placeholder=" " required class="floating-input resize-none"></textarea>
+                                <label for="message" class="floating-label top-4">Your Message</label>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-primary text-white font-bold text-lg hover:bg-primary-container hover:shadow-glow transition-all transform active:scale-95">
+                                Send Message
+                            </button>
+                            
+                            <p class="text-xs text-center text-on-surface-variant mt-4">
+                                We typically respond within 24-48 hours during business days.
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Right Side: Info & Map -->
+                    <div class="flex flex-col gap-8">
+                        
+                        <!-- Contact Details Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20">
+                                <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary mb-4">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <h3 class="font-serif font-bold text-primary text-lg mb-2">Visit Us</h3>
+                                <p class="text-sm text-on-surface-variant leading-relaxed">
+                                    42 Residency Road,<br>
+                                    Richmond Town,<br>
+                                    Bengaluru, Karnataka 560025
+                                </p>
+                            </div>
+
+                            <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20">
+                                <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary mb-4">
+                                    <span class="material-symbols-outlined">call</span>
+                                </div>
+                                <h3 class="font-serif font-bold text-primary text-lg mb-2">Call Us</h3>
+                                <p class="text-sm text-on-surface-variant leading-relaxed">
+                                    Office: +91 98450 12345<br>
+                                    Emergency Pastoral Care:<br>
+                                    +91 98450 67890
+                                </p>
+                            </div>
+
+                            <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20">
+                                <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary mb-4">
+                                    <span class="material-symbols-outlined">mail</span>
+                                </div>
+                                <h3 class="font-serif font-bold text-primary text-lg mb-2">Email Us</h3>
+                                <p class="text-sm text-on-surface-variant leading-relaxed">
+                                    General: office@gracechurchfellowship.in<br>
+                                    Prayer: prayer@gracechurchfellowship.in
+                                </p>
+                            </div>
+
+                            <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20">
+                                <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary mb-4">
+                                    <span class="material-symbols-outlined">schedule</span>
+                                </div>
+                                <h3 class="font-serif font-bold text-primary text-lg mb-2">Office Hours</h3>
+                                <p class="text-sm text-on-surface-variant leading-relaxed">
+                                    Mon - Fri: 9:00 AM – 5:00 PM<br>
+                                    Sat: 9:00 AM – 1:00 PM<br>
+                                    Sun: Closed (Worship Services)
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Map Placeholder -->
+                        <div class="flex-1 min-h-[300px] bg-surface-container-high rounded-2xl overflow-hidden border border-outline-variant/30 relative group">
+                            <!-- Using a generic iframe for map demonstration. Replace src with actual Google Maps Embed API link if needed -->
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0458854321!2d77.5946!3d12.9611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1677c6b41201%3A0x85d0fa99c8eb345!2sResidency%20Road%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1630000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                            </iframe>
+                            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-sm">
+                                <span class="text-xs font-bold text-primary">Click to interact with map</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant/30 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Col -->
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-secondary">
+                            <span class="material-symbols-outlined text-2xl">church</span>
+                        </div>
+                        <div class="flex flex-col leading-tight">
+                            <span class="font-serif font-bold text-xl text-primary">Grace Church</span>
+                            <span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Fellowship India</span>
+                        </div>
+                    </div>
+                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                        A Christ-centered family of faith in Bengaluru, committed to spreading love, hope, and the Gospel through word and deed.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors"><span class="material-symbols-outlined text-xl">facebook</span></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors"><span class="material-symbols-outlined text-xl">instagram</span></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors"><span class="material-symbols-outlined text-xl">youtube</span></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-serif font-bold text-primary text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="our_church.html" class="text-on-surface-variant hover:text-secondary transition-colors text-sm">About Us</a></li>
+                        <li><a href="ministries.html" class="text-on-surface-variant hover:text-secondary transition-colors text-sm">Ministries</a></li>
+                        <li><a href="sermons.html" class="text-on-surface-variant hover:text-secondary transition-colors text-sm">Sermons</a></li>
+                        <li><a href="events.html" class="text-on-surface-variant hover:text-secondary transition-colors text-sm">Events Calendar</a></li>
+                        <li><a href="prayer.html" class="text-on-surface-variant hover:text-secondary transition-colors text-sm">Prayer Wall</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-serif font-bold text-primary text-lg mb-6">Visit Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary mt-1">location_on</span>
+                            <div class="text-sm text-on-surface-variant">
+                                42 Residency Road,<br>Richmond Town,<br>Bengaluru, Karnataka 560025
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary">call</span>
+                            <a href="tel:+919845012345" class="text-sm text-on-surface-variant hover:text-primary transition-colors">+91 98450 12345</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary">mail</span>
+                            <a href="mailto:office@gracechurchfellowship.in" class="text-sm text-on-surface-variant hover:text-primary transition-colors">office@gracechurchfellowship.in</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter / Verse -->
+                <div>
+                    <h4 class="font-serif font-bold text-primary text-lg mb-6">Daily Verse</h4>
+                    <div class="bg-surface-container p-6 rounded-xl border-l-4 border-secondary">
+                        <p class="italic text-on-surface-variant text-sm mb-3">"The Lord bless you and keep you; the Lord make his face shine on you and be gracious to you."</p>
+                        <cite class="not-italic text-xs font-bold text-primary block text-right">— Numbers 6:24-25</cite>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-outline-variant/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-on-surface-variant">&copy; 2026 Grace Church Fellowship Bengaluru. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-xs text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-xs text-on-surface-variant hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/nav.js"></script>
+</body>
+</html>
