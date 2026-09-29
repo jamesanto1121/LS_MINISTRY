@@ -74,8 +74,21 @@
                         </div>
                     </div>
 
-                    <!-- Sermons Link (Active) -->
-                    <a href="sermons.html" class="nav-link text-sm font-semibold text-white hover:text-secondary-light transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-secondary" data-page="sermons">Sermons</a>
+                    <!-- Sermons Dropdown -->
+                    <div class="relative group">
+                        <a href="sermons.html" class="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors focus:outline-none">
+                            Sermons
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-300 pointer-events-none"></i>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-56 origin-top-left scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out z-50">
+                            <div class="backdrop-blur-xl rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2 ring-1 ring-white/5" style="background-color: #0F172A;">
+                                <a href="sermons.html#latest" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Latest Messages</a>
+                                <a href="sermons.html#series" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Sermon Series</a>
+                                <a href="sermons.html#live" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Live Stream</a>
+                                <a href="sermons.html#podcasts" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Podcasts</a>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Events Dropdown -->
                     <div class="relative group">
@@ -89,6 +102,27 @@
                                 <a href="events.html#calendar" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Church Calendar</a>
                                 <a href="events.html#retreats" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Retreats & Camps</a>
                                 <a href="events.html#volunteer" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">Volunteer Sign-up</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Language Selector (Static Links) -->
+                    <div class="relative group">
+                        <a href="#" class="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors focus:outline-none cursor-default">
+                            <i data-lucide="globe" class="w-4 h-4 text-gray-400"></i>
+                            EN
+                            <i data-lucide="chevron-down" class="w-3 h-3 opacity-70 text-gray-400 group-hover:rotate-180 transition-transform duration-300 pointer-events-none"></i>
+                        </a>
+                        <div class="absolute top-full right-0 mt-2 w-36 origin-top-right scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out z-50">
+                            <div class="backdrop-blur-xl rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2 ring-1 ring-white/5" style="background-color: #0F172A;">
+                                <a href="sermons.html" class="block w-full flex items-center justify-between px-4 py-2.5 text-sm text-secondary-light font-semibold bg-white/5 transition-colors">
+                                    <span>English</span>
+                                    <span class="text-xs">✓</span>
+                                </a>
+                                <a href="sermons_ta.html" class="block w-full flex items-center justify-between px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-secondary-light transition-colors">
+                                    <span>Tamil</span>
+                                    <span class="text-xs text-gray-500">தமிழ்</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -116,7 +150,7 @@
             </div>
             <nav class="flex-1 p-6 flex flex-col gap-2 overflow-y-auto">
                 <!-- Home -->
-                <a href="index.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" data-page="home">Home</a>
+                <a href="index.html" class="nav-item block px-4 py-3 rounded-lg text-base font-medium text-white bg-white/5" data-page="home">Home</a>
                 
                 <!-- Our Church Accordion -->
                 <div class="mobile-nav-parent">
@@ -146,8 +180,19 @@
                     </div>
                 </div>
 
-                <!-- Sermons Simple Link (Active) -->
-                <a href="sermons.html" class="nav-item block px-4 py-3 rounded-lg text-base font-semibold text-white bg-white/5" data-page="sermons">Sermons</a>
+                <!-- Sermons Accordion -->
+                <div class="mobile-nav-parent">
+                    <button type="button" class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors" aria-expanded="false">
+                        Sermons
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-submenu hidden pl-4 pr-2 pb-2 space-y-1">
+                        <a href="sermons.html#latest" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Latest Messages</a>
+                        <a href="sermons.html#series" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Sermon Series</a>
+                        <a href="sermons.html#live" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Live Stream</a>
+                        <a href="sermons.html#podcasts" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Podcasts</a>
+                    </div>
+                </div>
 
                 <!-- Events Accordion -->
                 <div class="mobile-nav-parent">
@@ -160,6 +205,20 @@
                         <a href="events.html#calendar" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Church Calendar</a>
                         <a href="events.html#retreats" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Retreats & Camps</a>
                         <a href="events.html#volunteer" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors">Volunteer Sign-up</a>
+                    </div>
+                </div>
+
+                <!-- Language Accordion (Mobile - Static Links) -->
+                <div class="mobile-nav-parent mt-2 pt-2 border-t border-white/10">
+                    <a href="#" class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors cursor-default">
+                        <span class="flex items-center gap-2"><i data-lucide="globe" class="w-5 h-5 text-gray-400"></i> Language</span>
+                        <span class="text-xs text-gray-500">EN ✓</span>
+                    </a>
+                    <div class="pl-4 pr-2 pb-2 space-y-1">
+                        <a href="sermons_ta.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-secondary-light hover:bg-white/5 rounded-md transition-colors flex items-center justify-between">
+                            <span>Switch to Tamil</span>
+                            <span class="text-xs text-gray-500">தமிழ்</span>
+                        </a>
                     </div>
                 </div>
 

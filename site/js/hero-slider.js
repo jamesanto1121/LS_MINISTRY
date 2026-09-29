@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
   let intervalId;
   let startTime;
-  const SLIDE_DURATION = 3000; // 3 seconds
+  const SLIDE_DURATION = 5000; // 5 seconds
 
   // Initialize Dots
   slides.forEach((_, index) => {
